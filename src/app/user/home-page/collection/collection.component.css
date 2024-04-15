@@ -1,0 +1,42 @@
+
+.outstanding-products > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.outstanding-products > div > div {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 1vh 0.5vw;
+    box-sizing: border-box;
+}
+
+.outstanding-products > div > div div {
+    margin: 1vh 0;
+}
+
+.outstanding-products > div > div img {
+    width: 100%;
+}
+
+.outstanding-products > div .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-weight: 500;
+}
+
+.outstanding-products > div  .new-price {
+    color: red;
+    padding-right: 1rem;
+}
+
+.outstanding-products > div  .old-price {
+    color: #939393;
+    font-size: 12px;
+}
+
+.title {
+    margin: 2vh 0;
+}

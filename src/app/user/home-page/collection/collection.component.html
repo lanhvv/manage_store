@@ -1,0 +1,22 @@
+<div class="outstanding-products">
+    <div>
+        <ng-container *ngFor="let product of products">
+            <div>
+                <div>
+                    <img [src]="product?.imgMain" alt="">
+                </div>
+                <div>
+                    <div class="title">
+                        <a>{{Util.getFullnameProduct(getType(product?.type)?.type, product?.name, product?.code)}}</a>
+                    </div>
+                    <div>
+                        <span class="new-price">{{Util.getPriceAfterDiscount(product?.price, product?.discount) | number: '1.0-0'}}<u>đ</u></span> <del class="old-price">{{product?.price | number: '1.0-0'}}<u>đ</u></del>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="title" *ngIf="products.length == 0">
+    Chưa có sản phẩm nào trong nhóm sản phẩm này!
+</div>

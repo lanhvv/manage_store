@@ -1,0 +1,41 @@
+<div class="sub-nav">
+    <div><a>Trang chủ</a><span>/</span><a> Danh mục</a><span>/</span><a> Tất cả sản phẩm</a></div>
+</div>
+<div class="content">
+    <div>
+        <h3>DANH MỤC</h3>
+        <hr>
+        <p>Trang chủ</p>
+        <p>Sản phẩm</p>
+        <p>Blog</p>
+        <p>Giới thiệu</p>
+        <p>Kiểm tra đơn hàng</p>
+    </div>
+    <div>
+        <div>
+            <h2>Tất cả sản phẩm</h2>
+        </div>
+        <div class="product">
+            <div>
+                <ng-container *ngFor="let product of products">
+                    <div>
+                        <div>
+                            <img [src]="product?.imgMain" alt="">
+                        </div>
+                        <div>
+                            <div class="title">
+                                <a>{{Util.getFullnameProduct(getType(product?.type)?.type, product?.name, product?.code)}}</a>
+                            </div>
+                            <div>
+                                <span class="new-price">{{Util.getPriceAfterDiscount(product?.price, product?.discount) | number: '1.0-0'}}<u>đ</u></span> <del class="old-price">{{product?.price | number: '1.0-0'}}<u>đ</u></del>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="title" *ngIf="products.length == 0">
+            Chưa có sản phẩm nào trong nhóm sản phẩm này!
+        </div>
+    </div>
+</div>

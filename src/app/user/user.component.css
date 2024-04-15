@@ -31,6 +31,10 @@ nav > a {
     font-weight: 250;
 }
 
+footer {
+    margin-top: 5vh;
+}
+
 footer .footer-1 {
     height: 7vh;
     display: flex;
@@ -59,4 +63,8 @@ footer .footer-1 > * > div:last-child > p:first-child {
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.body-user {
+    width: 100vw;
 }

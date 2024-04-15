@@ -2,7 +2,7 @@
     <header>
         <div></div>
         <div>
-            <a href="#">
+            <a [routerLink]="['/user/home-page']">
                 <img src="https://theme.hstatic.net/200000654527/1000998163/14/logo.png?v=313" alt="">
             </a>
         </div>
@@ -13,12 +13,15 @@
         </div>
     </header>
     <nav>
-        <a >Trang chủ</a>
-        <a >Sản phẩm</a>
+        <a [routerLink]="['/user/home-page']">Trang chủ</a>
+        <a [routerLink]="['/user/products']">Sản phẩm</a>
         <a >Blog</a>
         <a >Giới thiệu</a>
         <a >Kiểm tra đơn hàng</a>
     </nav>
+    <div role="body" class="body-user">
+        <router-outlet></router-outlet>
+    </div>
     <footer>
         <div class="footer-1">
             <div>

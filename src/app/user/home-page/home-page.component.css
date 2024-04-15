@@ -1,0 +1,122 @@
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+::ng-deep .p-carousel .p-carousel-indicators  {
+    display: none;
+}
+
+.banner > div:last-child {
+    display: flex;
+}
+
+.banner > div:last-child > div {
+    width: 25%;
+    height: 40vh;
+    background-position: 90% 50%;
+    background-size: 50% auto;
+    position: relative;
+}
+
+.banner > div:last-child > div > div {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.banner > div:last-child > div > div > p {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.banner > div:last-child > div:nth-child(1) {
+    background-image: url('https://theme.hstatic.net/200000654527/1000998163/14/hc_image_1.png?v=313');
+    background-repeat: no-repeat;
+    background-color: #C7C1C6;
+}
+.banner > div:last-child > div:nth-child(2) {
+    background-image: url('https://theme.hstatic.net/200000654527/1000998163/14/hc_image_2.png?v=313');
+    background-repeat: no-repeat;
+    background-color: #000000;
+
+}
+.banner > div:last-child > div:nth-child(3) {
+    background-image: url('https://theme.hstatic.net/200000654527/1000998163/14/hc_image_3.png?v=313');
+    background-repeat: no-repeat;
+    background-color: #C7C1C6;
+}
+.banner > div:last-child > div:nth-child(4) {
+    background-image: url('https://theme.hstatic.net/200000654527/1000998163/14/hc_image_4.png?v=313');
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
+
+.outstanding-products {
+    padding: 0 20vw;
+}
+
+.outstanding-products > div:nth-child(1),
+.outstanding-products > div:nth-child(3) {
+    text-align: center;
+}
+
+.outstanding-products > div:nth-child(2) {
+    display: flex;
+}
+
+.outstanding-products > div:nth-child(2) > div {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 1vh 0.5vw;
+    box-sizing: border-box;
+}
+
+.outstanding-products > div:nth-child(2) > div div {
+    margin: 1vh 0;
+}
+
+.outstanding-products > div:nth-child(2) > div img {
+    width: 100%;
+}
+
+.outstanding-products > div:nth-child(2) .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    font-weight: 500;
+}
+
+.outstanding-products > div:nth-child(2)  .new-price {
+    color: red;
+    padding-right: 1rem;
+}
+
+.outstanding-products > div:nth-child(2)  .old-price {
+    color: #939393;
+    font-size: 12px;
+}
+
+.banner-2 {
+    padding: 0 20vw;
+    height: 40vh;
+    margin: 5vh;
+}
+
+.collection {
+    padding: 0 20vw;    
+}
+
+.collection > div:nth-child(1),
+.collection > div:nth-child(2),
+.collection > div:nth-child(4){
+    text-align: center;
+}
+
+.collection > div:nth-child(2) > a {
+    padding: 0 1vw;
+    font-weight: bolder;
+}
