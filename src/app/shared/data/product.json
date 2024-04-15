@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "size": [1,2],
+        "color": [1,2],
+        "type": 1,
+        "category": 1,
+        "name": "Áo polo Dragon Karants Local Brand Form Oversize",
+        "code": "KR73",
+        "price": 390000,
+        "discount": 34,
+        "count": 100,
+        "img": [],
+        "imgMain": "https://product.hstatic.net/200000654527/product/doi__3__14d32ce9624142bcaa9168dd495626bc_grande.png",
+        "describe": ""
+    },
+    {
+        "id": 2,
+        "size": [1,2],
+        "color": [1,2],
+        "type": 1,
+        "category": 1,
+        "name": "Áo thun Dragon Karants Local Brand Form Oversize",
+        "code": "KR72",
+        "price": 390000,
+        "discount": 34,
+        "count": 100,
+        "img": [],
+        "imgMain": "https://product.hstatic.net/200000654527/product/doi__2__b9d914aebc944ae9b5532ec0a20a83b3_grande.png",
+        "describe": ""
+    },{
+        "id": 3,
+        "size": [1,2],
+        "color": [1,2],
+        "type": 1,
+        "category": 1,
+        "name": "Áo thun Dragon Karants Local Brand Form Oversize",
+        "code": "KR71",
+        "price": 300000,
+        "discount": 14,
+        "count": 100,
+        "img": [],
+        "imgMain": "https://product.hstatic.net/200000654527/product/kr71_2_mau-01tsnoted-01-01_b73b72fea7c24ad899f790b82375a970_grande.png",
+        "describe": ""
+    },
+    {
+        "id": 4,
+        "size": [1,2],
+        "color": [1,2],
+        "type": 1,
+        "category": 1,
+        "name": "Áo thun Dragon Karants Local Brand Form Oversize",
+        "code": "KR59",
+        "price": 300000,
+        "discount": 14,
+        "count": 100,
+        "img": [],
+        "imgMain": "https://product.hstatic.net/200000654527/product/59_1_7325538deebb4262bfe0734db50154cb_grande.png",
+        "describe": ""
+    }
+
+]
