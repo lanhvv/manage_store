@@ -1,0 +1,94 @@
+<div class="main">
+    <div class="title">
+        <h2 *ngIf="!isUpdate">Thêm mới</h2>
+        <h2 *ngIf="isUpdate">Cập nhập</h2>
+    </div>
+    <div class="form">
+        <form novalidate [formGroup]="form">
+            <div>
+                <div><label for="code">Code</label></div>
+                <input class="input" id="code" type="text" pInputText formControlName="code" />
+            </div>
+            <div>
+                <div><label for="name">Tên sản phẩm</label></div>
+                <input class="input" id="name" type="text" pInputText formControlName="name" />
+            </div>
+            <div>
+                <div><label for="type">Loại mặt hàng</label></div>
+                <p-dropdown 
+                    formControlName="type"
+                    [options]="types" 
+                    optionLabel="type"
+                    optionValue="id" 
+                    [showClear]="true" 
+                    placeholder="Chọn loại mặt hàng"></p-dropdown>
+            </div>
+            <div>
+                <div><label for="category">Loại sản phẩm</label></div>
+                <p-dropdown 
+                    formControlName="category"
+                    [options]="categories" 
+                    optionLabel="category"
+                    optionValue="id" 
+                    [showClear]="true" 
+                    placeholder="Chọn loại sản phẩm"></p-dropdown>
+            </div>
+            <div>
+                <div><label for="color">Màu</label></div>
+                <p-multiSelect 
+                    [options]="colors"
+                    formControlName="color" 
+                    placeholder="Chọn màu" 
+                    optionLabel="color"
+                    optionValue="id" 
+                    display="chip" 
+                    [showClear]="true"
+                >
+                    <ng-template let-values pTemplate="selectedItems">
+                        <div class="multi-input" *ngFor="let option of values">
+                            <div><button 
+                                    [style.border]="'0px'"
+                                    [style.background]="option.color"
+                                    [style.border-radius]="'0.2vw'"
+                                >&nbsp;&nbsp;&nbsp;&nbsp;</button> {{ option.color }},&nbsp;</div>
+                        </div>
+                        <div *ngIf="!values || values.length === 0">Chọn màu</div>
+                    </ng-template>
+                    <ng-template let-value pTemplate="item">
+                        <div class="multi-select-value">
+                            <div>
+                                <button 
+                                    [style.border]="'0px'"
+                                    [style.background]="value.color"
+                                    [style.border-radius]="'0.2vw'"
+                                >
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                </button> {{ value.color }}</div>
+                        </div>
+                    </ng-template>
+                </p-multiSelect>
+            </div>
+            <div>
+                <div><label for="size">Kích cỡ</label></div>
+                <p-multiSelect 
+                class="input"
+                [options]="sizes"
+                formControlName="size" 
+                placeholder="Chọn kích cỡ" 
+                optionLabel="size"
+                optionValue="id" 
+                display="chip" 
+                [showClear]="true"
+                >
+                </p-multiSelect>
+            </div>
+            <div>
+                <div><label for="size">Thành tiền</label></div>
+            </div>
+            <div>
+                <div><label for="count">Số lượng</label></div>
+                <input class="input" id="count" type="number" pInputText formControlName="count" />
+            </div>
+        </form>
+    </div>
+</div>

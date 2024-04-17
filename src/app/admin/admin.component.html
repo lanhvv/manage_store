@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="sidebar">
+        <div></div>
+        <div class="content-menu">
+            <div class="menu">
+                <span (click)="isShow = !isShow">Quản lý tài khoản</span>
+                <ng-container 
+                    *ngIf="isShow"
+                    [ngTemplateOutlet]="submenu"
+                    [ngTemplateOutletContext]="{submenu:['khách hàng', 'Nhân viên'],routerLink:['/admin/customers','/admin/employees']}"
+                ></ng-container>
+            </div>
+            <div class="menu">
+                <span 
+                    [routerLink]="['/admin/products']" 
+                    [routerLinkActive]="'active'"
+                >
+                    Quản lý sản phẩm
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<ng-template let-submenu="submenu" let-routerLink="routerLink" #submenu>
+    <ng-container *ngFor="let menu of submenu, let i = index">
+        <div class="submenu"><span [routerLinkActive]="'active'" [routerLink]="[routerLink[i]]">{{menu}}</span></div>
+    </ng-container>
+</ng-template>

@@ -1,0 +1,60 @@
+<div class="main">
+    <div class="title">
+        <h3>Danh sách sản phẩm</h3>
+        <p-button [routerLink]="['/admin/products/create']" severity="secondary" label="Thêm mới"></p-button>
+    </div>
+    <div class="content">
+        <div>
+            <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem','max-width': '100%'  }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>TT</th>
+                        <th>Code</th>
+                        <th>Tên</th>
+                        <th>Loại mặt hàng</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Màu</th>
+                        <th>Kích cỡ</th>
+                        <th>Giá gốc</th>
+                        <th>Giảm giá</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product let-i="rowIndex">
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ product.code }}</td>
+                        <td>{{ product.name }}</td>
+                        <td>{{ getType(product.type) }}</td>
+                        <td>{{ getCategory(product.category) }}</td>
+                        <td>
+                            <ng-container *ngFor="let item of product.color">
+                                <button
+                                    [style.border]="'0px'"
+                                    [style.background]="getColor(item)"
+                                    [style.border-radius]="'0.2rem'"
+                                    [style.margin-right]="'0.2vw'"
+                                >
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                </button>
+                            </ng-container>
+                        </td>
+                        <td>
+                            <ng-container *ngFor="let item of product.size">
+                                <p-chip >
+                                    <div style="font-size: 0.8rem;">{{getSize(item)}}</div>
+                                </p-chip>
+                            </ng-container>
+                        </td>
+                        <td>{{ product.price | number:'1.0-0' }}đ</td>
+                        <td>{{ product.discount }}%</td>
+                        <td>{{ Util.getPriceAfterDiscount(product.price, product.discount) | number:'1.0-0'}}đ</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>
