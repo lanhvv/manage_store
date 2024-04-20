@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "monitorId": 1,
+        "userId": 2,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "view": false
+    },
+    {
+        "id": 2,
+        "monitorId": 2,
+        "userId": 2,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "view": false
+    },
+    {
+        "id": 3,
+        "monitorId": 3,
+        "userId": 2,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "view": false
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Linh cute",
+        "age": 20,
+        "img": "",
+        "role": "user",
+        "birthday":"20021204",
+        "email": "linhcute@gmail.com",
+        "password": "linhcute"
+    },
+    {
+        "id": 2,
+        "name": "nobita",
+        "age": 20,
+        "img": "",
+        "role": "employee",
+        "birthday":"20021204",
+        "email": "nobita@gmail.com",
+        "password": "nobita"
+    },
+    {
+        "id": 3,
+        "name": "hehehehe",
+        "age": 20,
+        "img": "",
+        "role": "admin",
+        "birthday":"20021204",
+        "email": "hehehehe@gmail.com",
+        "password": "hehe"
+    }
+]
