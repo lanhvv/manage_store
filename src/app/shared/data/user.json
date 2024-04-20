@@ -1,32 +1,35 @@
 [
     {
         "id": 1,
+        "code": "CUS0001",
         "name": "Linh cute",
-        "age": 20,
         "img": "",
         "role": "user",
         "birthday":"20021204",
         "email": "linhcute@gmail.com",
-        "password": "linhcute"
+        "password": "linhcute",
+        "status": true
     },
     {
         "id": 2,
+        "code": "EMP0001",
         "name": "nobita",
-        "age": 20,
         "img": "",
         "role": "employee",
         "birthday":"20021204",
         "email": "nobita@gmail.com",
-        "password": "nobita"
+        "password": "nobita",
+        "status": true
     },
     {
         "id": 3,
+        "code": "AD0001",
         "name": "hehehehe",
-        "age": 20,
         "img": "",
         "role": "admin",
         "birthday":"20021204",
         "email": "hehehehe@gmail.com",
-        "password": "hehe"
+        "password": "hehe",
+        "status": true
     }
 ]
