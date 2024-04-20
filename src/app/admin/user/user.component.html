@@ -1,1 +1,48 @@
-<p>user works!</p>
+<div class="main">
+    <div class="title">
+        <h3>Danh sách {{title}}</h3>
+        <p-button [routerLink]="['/admin/users/create']" severity="secondary" label="Thêm mới"></p-button>
+    </div>
+    <div class="content">
+        <div>
+            <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem','max-width': '100%'  }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>TT</th>
+                        <th>img</th>
+                        <th>Code</th>
+                        <th>Tên</th>
+                        <th>Ngày sinh</th>
+                        <th>email</th>
+                        <th>password</th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user let-i="rowIndex">
+                    <tr>
+                        <td>{{ i + 1 }}</td>
+                        <td>{{user?.img}}</td>
+                        <td>{{user?.code}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user?.birthday}}</td>
+                        <td>{{user?.email}}</td>
+                        <td>{{user?.password}}</td>
+                        <td>
+                            <p-button icon="pi pi-file-edit" [rounded]="true" [text]="true" [routerLink]='["/admin/users/update/", user?.id]'></p-button>
+                            <p-button [icon]='user.status ? "pi pi-lock-open" : " pi pi-pi-lock"' [rounded]="true" [text]="true" (click)="confirm.showConfirm()"></p-button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>
+
+<app-confirm 
+    #confirm
+    key="confirm" 
+    summary="Bạn có chắc muốn thay đổi trạng thái?"
+></app-confirm>

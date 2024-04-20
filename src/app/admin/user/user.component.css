@@ -1,0 +1,17 @@
+.main {
+    width: 100%;
+    padding: 0 2vw;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+
+::ng-deep  .p-datatable .p-datatable-tbody > tr > td,
+::ng-deep  .p-datatable .p-datatable-thead > tr > th 
+{
+    text-align: center;
+}
