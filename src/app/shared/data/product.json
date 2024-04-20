@@ -12,7 +12,8 @@
         "count": 100,
         "img": [],
         "imgMain": "https://product.hstatic.net/200000654527/product/doi__3__14d32ce9624142bcaa9168dd495626bc_grande.png",
-        "describe": ""
+        "describe": "",
+        "status": true
     },
     {
         "id": 2,
@@ -27,7 +28,8 @@
         "count": 100,
         "img": [],
         "imgMain": "https://product.hstatic.net/200000654527/product/doi__2__b9d914aebc944ae9b5532ec0a20a83b3_grande.png",
-        "describe": ""
+        "describe": "",
+        "status": true
     },{
         "id": 3,
         "size": [1,2],
@@ -41,7 +43,8 @@
         "count": 100,
         "img": [],
         "imgMain": "https://product.hstatic.net/200000654527/product/kr71_2_mau-01tsnoted-01-01_b73b72fea7c24ad899f790b82375a970_grande.png",
-        "describe": ""
+        "describe": "",
+        "status": true
     },
     {
         "id": 4,
@@ -56,7 +59,8 @@
         "count": 100,
         "img": [],
         "imgMain": "https://product.hstatic.net/200000654527/product/59_1_7325538deebb4262bfe0734db50154cb_grande.png",
-        "describe": ""
+        "describe": "",
+        "status": true
     }
 
 ]

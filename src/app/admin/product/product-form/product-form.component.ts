@@ -22,6 +22,7 @@ export class ProductFormComponent implements OnInit{
   categories: any[];
   colors: any[];
   sizes: any[];
+  a:number=0;
   Util = Util;
 
   constructor(private route: ActivatedRoute,
@@ -56,6 +57,20 @@ export class ProductFormComponent implements OnInit{
 
   ngOnInit(): void {
     this.isUpdate = this.route.snapshot.params?.['id'] ? true : false;
+
+    if (this.isUpdate) {
+      const product = this.products.filter((x: any) => x?.id == this.route.snapshot.params?.['id'])?.[0];
+      Object.keys(product).forEach((x: any) => {
+        const control = this.control(x);
+        if (control) {
+          control.setValue(product?.[x]);
+        }
+      });
+    }
+  }
+
+  public control(name: string) {
+    return this.form.get(name);
   }
 
 }

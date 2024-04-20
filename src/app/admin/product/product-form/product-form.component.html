@@ -8,10 +8,18 @@
             <div>
                 <div><label for="code">Code</label></div>
                 <input class="input" id="code" type="text" pInputText formControlName="code" />
+                <app-message-validator
+                    [name]="'Code'"
+                    [input]='control("code")'   
+                ></app-message-validator>
             </div>
             <div>
                 <div><label for="name">Tên sản phẩm</label></div>
                 <input class="input" id="name" type="text" pInputText formControlName="name" />
+                <app-message-validator
+                    [name]="'Tên sản phẩm'"
+                    [input]='control("name")'   
+                ></app-message-validator>
             </div>
             <div>
                 <div><label for="type">Loại mặt hàng</label></div>
@@ -22,6 +30,10 @@
                     optionValue="id" 
                     [showClear]="true" 
                     placeholder="Chọn loại mặt hàng"></p-dropdown>
+                <app-message-validator
+                    [name]="'Loại mặt hàng'"
+                    [input]='control("type")'   
+                ></app-message-validator>
             </div>
             <div>
                 <div><label for="category">Loại sản phẩm</label></div>
@@ -32,6 +44,10 @@
                     optionValue="id" 
                     [showClear]="true" 
                     placeholder="Chọn loại sản phẩm"></p-dropdown>
+                <app-message-validator
+                    [name]="'Loại sản phẩm'"
+                    [input]='control("category")'   
+                ></app-message-validator>
             </div>
             <div>
                 <div><label for="color">Màu</label></div>
@@ -67,6 +83,10 @@
                         </div>
                     </ng-template>
                 </p-multiSelect>
+                <app-message-validator
+                    [name]="'Màu'"
+                    [input]='control("color")'   
+                ></app-message-validator>
             </div>
             <div>
                 <div><label for="size">Kích cỡ</label></div>
@@ -81,14 +101,57 @@
                 [showClear]="true"
                 >
                 </p-multiSelect>
+                <app-message-validator
+                    [name]="'Kích cỡ'"
+                    [input]='control("size")'   
+                ></app-message-validator>
             </div>
             <div>
-                <div><label for="size">Thành tiền</label></div>
+                <div><label>Thành tiền</label></div>
+                <div class="calculator">
+                    <div>
+                        <div><label for="price">Giá tiền</label></div>
+                        <p-inputNumber #price formControlName="price" inputId="price" mode="decimal"> </p-inputNumber>
+                        <app-message-validator
+                            [name]="'Giá tiền'"
+                            [input]='control("price")'   
+                        ></app-message-validator>
+                    </div>
+                    <div>
+                        <div><label for="discount">Giảm giá</label></div>
+                        <p-inputNumber #discount formControlName="discount" inputId="discount" mode="decimal"  [min]="0" [max]="100"> </p-inputNumber>
+                        <app-message-validator
+                            [name]="'Giảm giá'"
+                            [input]='control("discount")'   
+                        ></app-message-validator>
+                    </div>
+                    <div>
+                        <div class="label-calculator"><label for="">&nbsp;</label></div>
+                        <div class="value-calculator">= {{Util.getPriceAfterDiscount(price.value, discount.value) | number:'1.0-0'}}đ</div>
+                    </div>
+                </div>
             </div>
             <div>
                 <div><label for="count">Số lượng</label></div>
-                <input class="input" id="count" type="number" pInputText formControlName="count" />
+                <p-inputNumber formControlName="count" inputId="count" [min]="0" [max]="10000"> </p-inputNumber>
+                <app-message-validator
+                    [name]="'Số lượng'"
+                    [input]='control("count")'   
+                ></app-message-validator>
+            </div>
+            <div class="scope-btn">
+                <p-button [label]="isUpdate ? 'Cập nhập' : 'Thêm mới'" 
+                    severity="secondary" 
+                    [disabled]="form.valid ? false : true"
+                    (click)="isUpdate ? confirm.showConfirm() : ''"
+                ></p-button>
             </div>
         </form>
     </div>
 </div>
+
+<app-confirm 
+    #confirm
+    key="confirm" 
+    summary="Bạn chắc chắn thay đổi thông tin sản phẩm?"
+></app-confirm>

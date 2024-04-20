@@ -1,0 +1,21 @@
+<div class="card flex justify-content-center">
+    <p-toast [position]="position" key="confirm" (onClose)="onReject()" >
+        <ng-template let-message pTemplate="message">
+            <div class="flex flex-column" style="flex: 1">
+                <div class="text-center">
+                    <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                    <h4>{{message.summary}}</h4>
+                </div>
+                <div class="btn-confirm">
+                    <div>
+                        <p-button label="Có" (click)="onConfirm()" [raised]="true" severity="success"></p-button>
+                    </div>
+                    <div>
+                        <p-button label="Không" (click)="onReject()" [raised]="true" severity="secondary"></p-button>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-toast>
+</div>
+

@@ -15,6 +15,9 @@ import { ProductFormComponent } from './product/product-form/product-form.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { MessageValidatorModule } from '../common-component/message-validator/message-validator.module';
+import { NotifyToastModule } from '../common-component/notify-toast/notify-toast.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,7 @@ import { DropdownModule } from 'primeng/dropdown';
     UserComponent,
     EmployeeComponent,
     ProductComponent,
-    ProductFormComponent
+    ProductFormComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,10 @@ import { DropdownModule } from 'primeng/dropdown';
     TagModule,
     ReactiveFormsModule,
     MultiSelectModule,
-    DropdownModule
+    DropdownModule,
+    InputNumberModule,
+    MessageValidatorModule,
+    NotifyToastModule,
   ]
 })
 export class AdminModule { }

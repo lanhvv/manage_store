@@ -1,0 +1,9 @@
+.btn-confirm {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn-confirm ::ng-deep p-button button {
+    width: 5vw;
+}

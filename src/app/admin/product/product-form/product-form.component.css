@@ -32,3 +32,39 @@
 ::ng-deep .p-dropdown {
     width: 100%;
 }
+
+.calculator {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+}
+
+.label-calculator {
+    padding: 7px;
+    clear: both;
+}
+
+.value-calculator {
+    margin:  auto 0;
+}
+
+form > div {
+    width: 100%;
+}
+
+::ng-deep p-inputnumber {
+    width: 100%;
+}
+
+::ng-deep p-inputnumber .p-inputnumber {
+    width: 100%;
+}
+
+.scope-btn {
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.scope-btn > ::ng-deep p-button button {
+    float: right;
+}
