@@ -20,11 +20,9 @@ export class UserComponent {
     private userService: UserService,
     private route: ActivatedRoute
   ) {
-    // of(this.route.routeConfig).subscribe((routeConfig: any) => {
-      debugger
       const role = this.route.snapshot.routeConfig?.path == Enums.CUSTOMERS ? Enums.CUSTOMER : Enums.EMPLOYEE;
       this.title = role == Enums.CUSTOMER ? Enums.CUSTOMER_TITLE : Enums.EMPLOYEE_TITLE;
       this.users = this.userService.getUsers().filter((x: any) => role == x?.role);
-    // });
+      debugger
   }
 }

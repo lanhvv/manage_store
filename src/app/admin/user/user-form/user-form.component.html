@@ -1,1 +1,27 @@
-<p>user-form works!</p>
+<div class="main">
+    <div class="title">
+        <h2 *ngIf="!isUpdate">Thêm mới</h2>
+        <h2 *ngIf="isUpdate">Cập nhập</h2>
+    </div>
+    <div class="form">
+        <form novalidate [formGroup]="form">
+            <div>
+                <div><label for="name">Tên</label></div>
+                
+            </div>
+            <div class="scope-btn">
+                <p-button [label]="isUpdate ? 'Cập nhập' : 'Thêm mới'" 
+                    severity="secondary" 
+                    [disabled]="form.valid ? false : true"
+                    (click)="isUpdate ? confirm.showConfirm() : ''"
+                ></p-button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<app-confirm 
+    #confirm
+    key="confirm" 
+    summary="Bạn chắc chắn thay đổi thông tin sản phẩm?"
+></app-confirm>
