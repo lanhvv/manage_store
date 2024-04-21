@@ -1,7 +1,11 @@
 <div class="main">
     <div class="sidebar">
-        <div></div>
         <div class="content-menu">
+            <div class="menu">
+                <span>
+                    Thống kê
+                </span>
+            </div>
             <div class="menu">
                 <span (click)="isShow = !isShow">Quản lý tài khoản</span>
                 <ng-container 
@@ -18,6 +22,17 @@
                     Quản lý sản phẩm
                 </span>
             </div>
+        </div>
+        <div class="footer-sidebar content-menu">
+            <div class="dropdown dropend center-line-title">
+                <span class="" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="pi pi-cog" style="padding-right: 0.5rem;"></i> {{getName()}}
+                </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="#">Thông tin tài khoản</a></li>
+                  <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                </ul>
+              </div>
         </div>
     </div>
     <div class="content">
