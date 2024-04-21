@@ -14,6 +14,7 @@ export class UserFormComponent {
   form: FormGroup;
   users: any[] = [];
   Util = Util;
+  roles: any[] = [{key:"customer" ,value: "Khánh hàng"},{key:"employee" ,value: "Nhân viên"}];
 
   constructor(private route: ActivatedRoute,
     private userService: UserService
@@ -23,11 +24,11 @@ export class UserFormComponent {
     this.form = new FormGroup({
       "name": new FormControl("", [Validators.required]),
       "img":new FormControl(""),
-      "role": new FormControl("", [Validators.required]),
       "birthday": new FormControl(new Date(), [Validators.required]),
       "email": new FormControl("", [Validators.required, Validators.email]),
       "password": new FormControl("", [Validators.required])
     });
+    debugger
   }
 
   ngOnInit(): void {

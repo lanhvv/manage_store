@@ -19,7 +19,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { MessageValidatorModule } from '../common-component/message-validator/message-validator.module';
 import { NotifyToastModule } from '../common-component/notify-toast/notify-toast.module';
 import { UserFormComponent } from './user/user-form/user-form.component';
-
+import { CalendarModule } from 'primeng/calendar';
 @NgModule({
   declarations: [
     AdminComponent,
@@ -43,6 +43,7 @@ import { UserFormComponent } from './user/user-form/user-form.component';
     InputNumberModule,
     MessageValidatorModule,
     NotifyToastModule,
+    CalendarModule
   ]
 })
 export class AdminModule { }

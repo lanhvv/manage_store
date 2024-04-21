@@ -5,7 +5,7 @@
         "name": "Linh cute",
         "img": "",
         "role": "customer",
-        "birthday":"20021204",
+        "birthday":"Sat Apr 20 2024",
         "email": "linhcute@gmail.com",
         "password": "linhcute",
         "status": true
@@ -16,7 +16,7 @@
         "name": "nobita",
         "img": "",
         "role": "employee",
-        "birthday":"20021204",
+        "birthday":"Sat Apr 20 2024",
         "email": "nobita@gmail.com",
         "password": "nobita",
         "status": true

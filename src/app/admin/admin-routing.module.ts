@@ -12,8 +12,10 @@ const routes: Routes = [
     children: [
       {path:"customers", component: UserComponent},
       {path:"customers/create", component:UserFormComponent},
+      {path:"customers/update/:id", component:UserFormComponent},
       {path:"employees", component: UserComponent},
       {path:"employees/create", component:UserFormComponent},
+      {path:"employees/update/:id", component:UserFormComponent},
       {path:"products", component:ProductComponent},
       {path:"products/create", component:ProductFormComponent},
       {path:"products/update/:id", component:ProductFormComponent},

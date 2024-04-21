@@ -8,4 +8,7 @@
     <div *ngIf="input?.errors?.max">
         Giá trị lớn nhất là  {{input?.errors?.max?.max | number:'1.0-0'}}
     </div>
+    <div *ngIf="input?.errors?.email">
+        Email không hợp lệ
+    </div>
 </div>

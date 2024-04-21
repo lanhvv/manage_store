@@ -7,7 +7,37 @@
         <form novalidate [formGroup]="form">
             <div>
                 <div><label for="name">Tên</label></div>
-                
+                <input class="input" id="name" type="text" pInputText formControlName="name" />
+                <app-message-validator
+                    [name]="'Tên'"
+                    [input]='control("name")'   
+                ></app-message-validator>
+            </div>
+            <div>
+                <div><label for="birthday">Ngày sinh</label></div>
+                <p-calendar formControlName="birthday"
+                        [showClear]="true" 
+                ></p-calendar>
+                <app-message-validator
+                    [name]="'Ngày sinh'"
+                    [input]='control("birthday")'   
+                ></app-message-validator>
+            </div>
+            <div>
+                <div><label for="email">Email</label></div>
+                <input class="input" id="email" type="text" pInputText formControlName="email" />
+                <app-message-validator
+                    [name]="'Email'"
+                    [input]='control("email")'   
+                ></app-message-validator>
+            </div>
+            <div>
+                <div><label for="password">Password</label></div>
+                <input class="input" id="password" type="text" pInputText formControlName="password" />
+                <app-message-validator
+                    [name]="'Password'"
+                    [input]='control("password")'   
+                ></app-message-validator>
             </div>
             <div class="scope-btn">
                 <p-button [label]="isUpdate ? 'Cập nhập' : 'Thêm mới'" 

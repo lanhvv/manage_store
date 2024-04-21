@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { of } from 'rxjs';
 import { Enums } from 'src/app/shared/Enums.service';
 import { UserService } from 'src/app/shared/service/user.service';
 import { Util } from 'src/app/shared/util.service';
@@ -23,6 +22,5 @@ export class UserComponent {
       const role = this.route.snapshot.routeConfig?.path == Enums.CUSTOMERS ? Enums.CUSTOMER : Enums.EMPLOYEE;
       this.title = role == Enums.CUSTOMER ? Enums.CUSTOMER_TITLE : Enums.EMPLOYEE_TITLE;
       this.users = this.userService.getUsers().filter((x: any) => role == x?.role);
-      debugger
   }
 }

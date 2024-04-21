@@ -1,7 +1,7 @@
 <div class="main">
     <div class="title">
         <h3>Danh sách {{title}}</h3>
-        <p-button [routerLink]="['/admin/users/create']" severity="secondary" label="Thêm mới"></p-button>
+        <p-button [routerLink]="['./create']" severity="secondary" label="Thêm mới"></p-button>
     </div>
     <div class="content">
         <div>
@@ -28,7 +28,7 @@
                         <td>{{user?.email}}</td>
                         <td>{{user?.password}}</td>
                         <td>
-                            <p-button icon="pi pi-file-edit" [rounded]="true" [text]="true" [routerLink]='["/admin/users/update/", user?.id]'></p-button>
+                            <p-button icon="pi pi-file-edit" [rounded]="true" [text]="true" [routerLink]='["./update", user?.id]'></p-button>
                             <p-button [icon]='user.status ? "pi pi-lock-open" : " pi pi-pi-lock"' [rounded]="true" [text]="true" (click)="confirm.showConfirm()"></p-button>
                         </td>
                     </tr>
