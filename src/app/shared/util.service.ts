@@ -7,7 +7,7 @@ export class Util {
         return price - ((price*discount)/100);
     } 
 
-    static getSessionStorage(key: string) {
+    static getSessionStorage(key: string): any {
         return sessionStorage.getItem(key);
     }
 

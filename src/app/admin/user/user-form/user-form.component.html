@@ -42,7 +42,7 @@
             <div class="scope-btn">
                 <p-button [label]="isUpdate ? 'Cập nhập' : 'Thêm mới'" 
                     severity="secondary" 
-                    [disabled]="form.valid ? false : true"
+                    [disabled]="form.valid && form.dirty ? false : true"
                     (click)="isUpdate ? confirm.showConfirm() : ''"
                 ></p-button>
             </div>

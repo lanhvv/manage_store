@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="login">
+        <div><label class="title">Đăng nhập</label></div>
+        <form novalidate [formGroup]="form" >
+            <div>
+                <div><label for="email">Email</label></div>
+                <input class="input" id="email" type="text" pInputText formControlName="email" />
+                <app-message-validator
+                    [name]="'Email'"
+                    [input]='control("email")'   
+                ></app-message-validator>
+            </div>
+            <div>
+                <div><label for="password">Mật khẩu</label></div>
+                <p-password  [toggleMask]="true" formControlName="password"></p-password>
+                <app-message-validator
+                    [name]="'Mật khẩu'"
+                    [input]='control("password")'   
+                ></app-message-validator>
+            </div>
+            <div class="scope-btn">
+                <p-button label="Đăng nhập" 
+                    severity="secondary"
+                    (click)="login()"
+                ></p-button>
+            </div>
+            <div class="error-login" *ngIf="!isLoginSuccess">
+                Tài khoản mật khẩu không chính xác!
+            </div>
+        </form>
+    </div>
+</div>

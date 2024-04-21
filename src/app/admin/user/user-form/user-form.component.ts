@@ -29,6 +29,7 @@ export class UserFormComponent {
       "password": new FormControl("", [Validators.required])
     });
     debugger
+
   }
 
   ngOnInit(): void {
@@ -38,8 +39,13 @@ export class UserFormComponent {
       const user = this.users.filter((x: any) => x?.id == this.route.snapshot.params?.['id'])?.[0];
       Object.keys(user).forEach((x: any) => {
         const control = this.control(x);
+        let value : any = user?.[x];
+        if (control?.value instanceof Date) {
+          value = new Date(user?.[x]);
+        }
+
         if (control) {
-          control.setValue(user?.[x]);
+          control.setValue(value);
         }
       });
     }
